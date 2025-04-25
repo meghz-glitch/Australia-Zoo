@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  background-color: #064d00;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+ 
+}
+
+.nav {
+  display: flex;
+  gap: 10rem;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid rgb(222, 210, 210);
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.link:hover {
+  background-color: white;
+  color: #004d40;
+}
+
+
+
+  

@@ -1,0 +1,36 @@
+.card {
+    border: 1px solid #275f1f;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: rgb(215, 226, 141);
+    margin-bottom: 1rem;
+  }
+  
+  .card img {
+    max-width: 150px;
+    border-radius: 5px;
+  }
+  
+  .name {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .description {
+    color: #333;
+  }
+  
+  .readMore {
+    background-color: #80b7b1;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .readMore:hover {
+    background-color: #004d40;
+  }
+  

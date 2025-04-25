@@ -1,0 +1,25 @@
+.sidebar {
+    width: 250px;
+    background-color: #e0f2f1;
+    padding: 1rem;
+    border-right: 1px solid #b2dfdb;
+  }
+  
+  .animalList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .animalItem {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.3s;
+  }
+  
+  .animalItem:hover,
+  .active {
+    background-color: #b2dfdb;
+  }
+  
