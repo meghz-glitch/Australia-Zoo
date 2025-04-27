@@ -14,7 +14,7 @@ export const animals = [
     },
 
     {
-      name:'Tasmanian Devil',
+      name:'Tasmanian Devil',image: new URL("/src/assets/tasmanian.jpg", import.meta.url).href,
       lifespan: '5 years', 
       group: 'mammals',
       food: 'A predator, then eat meat from other animals such as wallabies and wombats',
@@ -25,8 +25,7 @@ export const animals = [
     },
 
     {
-      
-      name:'quokka', 
+      name:'quokka', image: new URL("/src/assets/quokka.jpg", import.meta.url).href,
       lifespan: '10 years',
       group: 'mammals',
       food: 'Plant eaters, they munch on shrubs and grasses',
@@ -37,7 +36,7 @@ export const animals = [
     },
    
       {
-      name:'frill-necked lizard',
+      name:'frill-necked lizard',image: new URL("/src/assets/frill-necked.jpg", import.meta.url).href,
       lifespan:'20 years',
       group:'reptiles',
       food: 'Small insects and spiders',
@@ -48,9 +47,9 @@ export const animals = [
       },
 
       {
-      name:'Hawksbill Turtle',
+      name:'Hawksbill Turtle',image: new URL("/src/assets/hawksbill.jpg", import.meta.url).href,
       lifespan: '50 years', 
-      group: 'reptile', 
+      group: 'reptiles', 
       food: 'other animals (sponges & jellyfish), sea plants',
       description: 'The Hawksbill Sea Turtle gets its common name from the distinctive mouth, which resembles a bird’s beak. The shell, or carapace, is covered in large overlapping scutes, which are a distinctive brown/green/amber background with lighter brown streaks throughout. At the edge of the carapace they overlap in such a way as to form a serrated edge. The turtle has an elongated head and flippers which have two visible claws on the end. The flippers and head are covered in large green, brown or yellow scales. The average adult female weighs 50 kg and their carapace (shell) is approximately 80 cm in length.',
       length:' 80cm (carapace)',
@@ -59,10 +58,9 @@ export const animals = [
       },
 
       {
-
-      name:'Perentie', 
+      name:'Perentie', image: new URL("/src/assets/perentie.jpg", import.meta.url).href,
       lifespan: '20 years',
-      group: 'reptile',
+      group: 'reptiles',
       food: 'Carnivore, they eat animals like kangaroos, rabbits, lizards and birds',
       description:' The perentie (Varanus giganteus) is the largest monitor lizard or goanna native to Australia. It is one of the largest living lizards on earth, after the Komodo dragon, Asian water monitor, crocodile monitor, and intersecting by size with Nile monitor.[3] Found west of the Great Dividing Range in the arid areas of Australia, it is rarely seen, because of its shyness and the remoteness of much of its range from human habitation. The species is considered to be a least-concern species according to the International Union for Conservation of Nature. Its status in many Aboriginal cultures is evident in the totemic relationships, and part of the Ngiṉṯaka dreaming, as well as bush tucker. It was a favoured food item among desert Aboriginal tribes, and the fat was used for medicinal and ceremonial purposes.',
       length: '2.5 m',
@@ -71,8 +69,7 @@ export const animals = [
       },
 
       {
-      
-      name:'Cassowary',
+      name:'Cassowary',image: new URL("/src/assets/cassowary.jpg", import.meta.url).href,
       lifespan: '20 years',
       group: 'birds',
       food: 'Plants matter like fruit, insects and small animals like mice amd lizards',
@@ -83,9 +80,9 @@ export const animals = [
       },
 
       {
-      name:'Kookaburra',
+      name:'Kookaburra',image: new URL("/src/assets/kookaburra.jpg", import.meta.url).href,
       lifespan: '20 years',
-      group: 'bird',
+      group: 'birds',
       food: 'Insects and smalll animals including snakes, frogs and lizards',
       description: 'Native to the eucalyptus forests of eastern Australia, the laughing kookaburra is the largest member of the Kingfisher family, with females weighing up to one pound and growing to 43 cm in length. Its beak can reach 10 cm long and is used to snatch a variety of invertebrates and small vertebrates, including the occasional small snake. Since being introduced in western Australia and New Zealand, the kookaburra has angered farmers by preying on their fowl. The laughing kookaburra has dark brown wing plumage and a white head and underside. Dark brown eye stripes run across its face and its upper bill is black. Its reddish-coloured tail is patterned with black bars.',
       length: '43cm',
@@ -94,9 +91,9 @@ export const animals = [
       },
 
       {
-      name:'Yellow Tailed Black Cockatoo',
+      name:'Yellow Tailed Black Cockatoo',image: new URL("/src/assets/yellow cockatoo.jpg", import.meta.url).href,
       lifespan: '41 years',
-      group: 'bird',
+      group: 'birds',
       food: 'Fruit, seeds and other plant material',
       description: 'It has a short crest on the top of its head. Its plumage is mostly brownish black and it has prominent yellow cheek patches and a yellow tail band. The body feathers are edged with yellow giving a scalloped appearance. The adult male has a black beak and pinkish-red eye-rings, and the female has a bone-coloured beak and grey eye-rings. In flight, yellow-tailed black cockatoos flap deeply and slowly, with a peculiar heavy fluid motion. Their loud, wailing calls carry for long distances. The whiteae is found south of Victoria to the East of South Australia and is smaller in size. The yellow-tailed black cockatoo is found in temperate forests and forested areas across south and central eastern Queensland to southeastern South Australia, including a very small population persisting in the Eyre Peninsula.[4] Two subspecies are recognised, although Tasmanian and southern mainland populations of the southern subspecies xanthanotus may be distinct enough from each other to bring the total to three. Birds of subspecies funereus (Queensland to eastern Victoria) have longer wings and tails and darker plumage overall, while those of xanthanotus (western Victoria, South Australia and Tasmania) have more prominent scalloping.',
       length:' 65 cm',

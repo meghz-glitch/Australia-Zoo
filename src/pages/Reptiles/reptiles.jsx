@@ -1,26 +1,51 @@
-import React from 'react';
-import PageLayout from '../../layouts/PageLayout';
-import { animals } from '../../data/animals';
-import Sidebar from '../../components/Sidebar/sidebar';
-import AnimalDetailModal from '../../components/AnimalDetailModal/animalDetailModal';
-
+import React, { useState } from "react";
+import PageLayout from "../../layouts/PageLayout";
+import { animals } from "../../data/animals";
+import Sidebar from "../../components/Sidebar/sidebar";
+import AnimalCard from "../../components/AnimalCard/animalCard";
+import AnimalDetailModal from "../../components/AnimalDetailModal/animalDetailModal";
+ 
+const reptiles = animals.filter((a) => a.group === "reptiles");
+ 
 const Reptiles = () => {
-  const [modalAnimal, setModalAnimal] = React.useState(null);
-  const reptiles = animals.filter(a => a.group === 'reptiles');
-
+  const [activeAnimalName, setActiveAnimalName] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+ 
+  const handleAnimalClick = (name) => {
+    setActiveAnimalName((prev) => (prev === name ? null : name));
+    setShowModal(false);
+  };
+ 
+  const handleReadMore = () => {
+    setShowModal(true);
+  };
+ 
   const sidebar = (
-    <Sidebar animals={reptiles} onAnimalClick={(name) => {
-      const animal = reptiles.find(a => a.name === name);
-      setModalAnimal(animal);
-    }} />
+    <Sidebar
+      animals={reptiles}
+      activeAnimal={activeAnimalName}
+      onAnimalClick={handleAnimalClick}
+    />
   );
-
+ 
+  const activeAnimal = reptiles.find(
+    (animal) => animal.name === activeAnimalName
+  );
+ 
   return (
     <PageLayout sidebar={sidebar}>
-      <h2>Learn about Australian Reptiles</h2>
-      {modalAnimal && <AnimalDetailModal animal={modalAnimal} onClose={() => setModalAnimal(null)} />}
+      {showModal ? (
+        <AnimalDetailModal
+          animal={activeAnimal}
+          onClose={() => setShowModal(false)}
+        />
+      ) : activeAnimal ? (
+        <AnimalCard animal={activeAnimal} onReadMore={handleReadMore} />
+      ) : (
+        <h2>Learn about Australian Reptiles</h2>
+      )}
     </PageLayout>
   );
 };
-
+ 
 export default Reptiles;
