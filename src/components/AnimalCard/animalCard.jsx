@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "../../components/AnimalCard/animalCard.module.css";
-import Styles from "../../components/ImageStyles.module.css";
 
-const AnimalCard = ({ animal, onReadMore, showGroupLink = false }) => {
+const AnimalCard = ({ animal, showGroupLink = false }) => {
+  const [expanded, setExpanded] = useState(false);
+
   const shortDesc = animal.description.slice(0, 200) + "...";
+
   return (
     <div className={styles.card}>
-      <img src={animal.image} alt={animal.name} className={styles.thumb} />
-      <h3>{animal.name}</h3>
-      <p>{shortDesc}</p>
+      <img
+        src={animal.image}
+        alt={animal.name}
+        className={expanded ? styles.fullImage : styles.thumb}
+      />
+
+      <h3 className={styles.name}>{animal.name}</h3>
+      <p className={styles.description}>
+        {expanded ? animal.description : shortDesc}
+      </p>
       <p>
         <strong>Food:</strong> {animal.food}
       </p>
@@ -20,14 +29,13 @@ const AnimalCard = ({ animal, onReadMore, showGroupLink = false }) => {
       )}
       <br />
       <button
-        onClick={() => {
-          onReadMore();
-        }}
+        className={styles.readMore}
+        onClick={() => setExpanded(!expanded)}
       >
-        Read More
+        {expanded ? "Show Less" : "Read More"}
       </button>
     </div>
   );
 };
- 
+
 export default AnimalCard;
