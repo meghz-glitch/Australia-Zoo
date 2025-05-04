@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../Sidebar/Sidebar.module.css';
+import styles from '../Sidebar/sidebar.module.css';
 
 const Sidebar = ({ animals, activeAnimal, onAnimalClick }) => (
   <ul className={styles.sidebarList}>
