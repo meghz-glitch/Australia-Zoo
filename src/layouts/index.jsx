@@ -1,17 +1,17 @@
+
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header/header";
 import Footer from "../components/Footer/footer";
+import styles from "./index.module.css";
 
-const layouts = () => {
-  return (
-    <>
-      <Header />
+const Layout = () => (
+  <>
+    <Header />
+    <main className={styles.mainContent}>
       <Outlet />
-      <Footer />
-      </>
-  );
-};
+    </main>
+    <Footer />
+  </>
+);
 
-export default layouts;
-
-
+export default Layout;

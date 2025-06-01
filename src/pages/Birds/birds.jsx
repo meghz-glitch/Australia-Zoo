@@ -30,7 +30,7 @@ const Birds = () => {
   const activeAnimal = birds.find((animal) => animal.name === activeAnimalName);
  
   return (
-    <PageLayout sidebar={sidebar}>
+    <index sidebar={sidebar}>
       {showModal ? (
         <AnimalDetailModal
           animal={activeAnimal}
@@ -41,7 +41,7 @@ const Birds = () => {
       ) : (
         <h2>Learn about Australian Birds</h2>
       )}
-    </PageLayout>
+    </index>
   );
 };
  

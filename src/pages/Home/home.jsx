@@ -35,7 +35,7 @@ const Home = () => {
   );
 
   return (
-    <PageLayout sidebar={sidebar} showSidebar={!showModal}>
+    <index sidebar={sidebar} showSidebar={!showModal}>
       {showModal ? (
         <AnimalDetailModal animal={activeAnimal} onClose={handleCloseModal} />
       ) : activeAnimal ? (
@@ -47,7 +47,7 @@ const Home = () => {
       ) : (
         <h2>Welcome to the Australia Zoo Exhibition!</h2>
       )}
-    </PageLayout>
+    </index>
   );
 };
 

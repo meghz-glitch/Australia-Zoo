@@ -32,7 +32,7 @@ const Mammals = () => {
   );
  
   return (
-    <PageLayout sidebar={sidebar}>
+    <index sidebar={sidebar}>
       {showModal ? (
         <AnimalDetailModal
           animal={activeAnimal}
@@ -43,7 +43,7 @@ const Mammals = () => {
       ) : (
         <h2>Learn about Australian Mammals</h2>
       )}
-    </PageLayout>
+    </index>
   );
 };
  

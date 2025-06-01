@@ -4,21 +4,18 @@ import Home from '../src/pages/Home/home';
 import Mammals from '../src/pages/Mammals/mammals';
 import Birds from '../src/pages/Birds/birds';
 import Reptiles from '../src/pages/Reptiles/reptiles';
-import index from '../src/layouts/index';
-import Header from '../src/components/Header/header';
+import Layouts from '../src/Layouts/index'; 
 
 function App() {
   return (
-    
-   
     <Routes>
-      
-      <Route path="/" element={<Home />} />
-      <Route path="/mammals" element={<Mammals />} />
-      <Route path="/birds" element={<Birds />} />
-      <Route path="/reptiles" element={<Reptiles />} />
+      <Route element={<Layouts />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/mammals" element={<Mammals />} />
+        <Route path="/birds" element={<Birds />} />
+        <Route path="/reptiles" element={<Reptiles />} />
+      </Route>
     </Routes>
-   
   );
 }
 
