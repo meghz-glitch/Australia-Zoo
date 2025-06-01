@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import PageLayout from "../../layouts/PageLayout";
 import Home from '../src/pages/Home/home';
 import Mammals from '../src/pages/Mammals/mammals';
 import Birds from '../src/pages/Birds/birds';

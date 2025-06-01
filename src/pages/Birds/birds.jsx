@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import PageLayout from "../../layouts/PageLayout";
 import { animals } from "../../data/animals.js";
 import Sidebar from "../../components/Sidebar/sidebar";
 import AnimalDetailModal from "../../components/AnimalDetailModal/animalDetailModal";
