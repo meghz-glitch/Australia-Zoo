@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import styles from '../AnimalDetailModal/animalModal.module.css';
 
 const AnimalDetailModal = ({ animal, onClose }) => {

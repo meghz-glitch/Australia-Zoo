@@ -4,6 +4,7 @@ import Sidebar from "../../components/Sidebar/sidebar";
 import AnimalCard from "../../components/AnimalCard/animalCard";
 import AnimalDetailModal from "../../components/AnimalDetailModal/animalDetailModal";
 
+
 const Home = () => {
   const [activeAnimalName, setActiveAnimalName] = useState(null);
   const [showModal, setShowModal] = useState(false);

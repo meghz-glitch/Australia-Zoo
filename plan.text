@@ -1,0 +1,78 @@
+Zoo Website Plan
+
+1. Project Setup
+  - Create React project using Vite
+  - install require dependencies(react-router-dom)
+  - set up project structure
+  - initialize Git repository 
+
+2. Data structure
+  - create animals.js data file
+  - it includes:
+   *name
+   *description
+   *image
+   *group
+   *additional details
+
+3. add images
+
+4. inside of src create components:
+
+ * Header component =>
+   props: logo, title (strings)
+   inside header:
+   - <img>: displays zoo logo,styled with styles.logo
+   - <nav>: navigation bar,styled with styles.nav
+   Contains 4 <link> components for routing:
+   - Home -> /
+   - Mammals -> /mammals
+   - Reptiles -> /reptiles
+   - Birds -> /birds
+   All links use class styles.link
+
+
+ * Sidebar component =>props:
+  - activeAnimal (object | null)
+  - onAnimalClick (function)
+  - maps animal names as clickable list items
+
+
+ * AnimalCard component =>
+  props: animal (object), showGroupLink (boolean, default false), onReadMore (function)
+  => card layout with class from CSS Module: animalCard.module.css
+  => displays:
+     - animal.image (img)
+     - animal.name (h3)
+     - short description (first 200 characters + "...")
+     - animal.food
+    if showGroupLink is true:
+     - Link to /{animal.group}
+     - button: "Read More" => onReadMore()
+
+
+ * AnimalDetail component =>
+  props: animal (object), onClose (function)
+  => full screen popup
+  => shows all animal data
+  => button => onClose()
+
+
+ * Footer component =>
+  - displays copyright:
+  - text: © 2025 Australia Zoo Exhibition
+  - styling with css module
+
+
+5. MainContent (Home) =>
+  useState: activeAnimal = null
+  => if no activeAnimal: show welcome message
+  => if activeAnimal: show short summary (image, name, diet, group link)
+  => "Read More" button triggers setShowDetail(true)
+
+
+6. Pages (Mammals/Birds/Reptiles) =>
+  useParams (to read route)
+  props: animals (filtered by group)
+  => Sidebar: only group animals
+  => MainContent: group message + full summary of selected
