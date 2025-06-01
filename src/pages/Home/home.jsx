@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PageLayout from "../../layouts/PageLayout";
 import { animals } from "../../data/animals";
 import Sidebar from "../../components/Sidebar/sidebar";
 import AnimalCard from "../../components/AnimalCard/animalCard";
