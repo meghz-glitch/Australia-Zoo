@@ -4,8 +4,6 @@ import Home from '../src/pages/Home/home';
 import Mammals from '../src/pages/Mammals/mammals';
 import Birds from '../src/pages/Birds/birds';
 import Reptiles from '../src/pages/Reptiles/reptiles';
-import index from '../src/layouts/index';
-import Header from '../src/components/Header/header';
 
 function App() {
   return (
