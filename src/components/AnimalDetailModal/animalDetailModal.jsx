@@ -1,12 +1,31 @@
-import React from 'react'; 
+import React, { useEffect } from 'react';
 import styles from '../AnimalDetailModal/animalModal.module.css';
 
 const AnimalDetailModal = ({ animal, onClose }) => {
   if (!animal) return null;
 
+  // Close modal on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
+
+  // Prevent click from bubbling when clicking inside modal
+  const handleContentClick = (e) => {
+    e.stopPropagation();
+  };
+
   return (
-    <div className={styles.modalOverlay}>
-      <div className={styles.modalContent}>
+    <div className={styles.modalOverlay} onClick={onClose}>
+      <div
+        className={styles.modalContent}
+        role="dialog"
+        aria-modal="true"
+        onClick={handleContentClick}
+      >
         <button onClick={onClose} className={styles.close}>Close</button>
         <h2>{animal.name}</h2>
         <img src={animal.image} alt={animal.name} className={styles.image} />
